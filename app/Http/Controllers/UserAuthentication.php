@@ -98,4 +98,8 @@ class UserAuthentication extends Controller
         return response()->json(['user' => auth()->user()], 200);
     }
 
+    public function unAuthorized(){
+        return response()->json('Unauthorized');
+    }
+
 }

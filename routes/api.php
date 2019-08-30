@@ -17,11 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('register','UserAuthentication@register');
+Route::post('register','UserAuthentication@register')->name('register');
 Route::post('login','UserAuthentication@login');
+Route::get('login','UserAuthentication@unAuthorized')->name('login');
+
 
 Route::middleware('auth:api')->group(function () {
-    Route::get('user', 'UserAuthentication@register');
+    Route::get('user', 'UserAuthentication@details');
 
     Route::post('create','Article@create');
 
