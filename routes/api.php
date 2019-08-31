@@ -24,7 +24,6 @@ Route::get('login','UserAuthentication@unAuthorized')->name('login');
 
 Route::middleware('auth:api')->group(function () {
     Route::get('user', 'UserAuthentication@details');
-
     Route::post('articles','Article@create');
     Route::put('articles/{id}','Article@update');
     Route::delete('articles/{id}','Article@delete');
