@@ -99,7 +99,7 @@ class UserAuthentication extends Controller
     }
 
     public function unAuthorized(){
-        return response()->json('Unauthorized');
+        return response('Unauthorized',401)->header('content-Type','application/json');;
     }
 
 }

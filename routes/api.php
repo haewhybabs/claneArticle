@@ -25,6 +25,13 @@ Route::get('login','UserAuthentication@unAuthorized')->name('login');
 Route::middleware('auth:api')->group(function () {
     Route::get('user', 'UserAuthentication@details');
 
-    Route::post('create','Article@create');
+    Route::post('articles','Article@create');
+    Route::put('articles/{id}','Article@update');
+    Route::delete('articles/{id}','Article@delete');
 
 });
+
+Route::get('articles','Article@list');
+Route::get('articles/{id}','Article@get');
+Route::post('articles/{id}/rating','RateArticle@rating');
+Route::get('search/articles','Article@search');
