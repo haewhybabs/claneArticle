@@ -5,7 +5,18 @@
 follow the following commands to get it started:
 
 * git clone https://github.com/haewhybabs/claneArticle.git
-* laradock was used to set up docker, docker-compose.yml can be found inside laradock 
+* cd ./claneArticle
+* docker run --rm -v $(pwd):/app composer install
+* sudo chown -R $USER:$USER ../claneArticle
+(remember to create and update the environmental variables from the `.env.example` file)
+* docker-compose up -d
+* docker-compose exec db bash
+* GRANT ALL ON laravel.* TO 'laraveluser'@'%' IDENTIFIED BY 'your_laravel_db_password';
+* FLUSH PRIVILEGES;
+* EXIT;
+* exit
+* docker-compose exec app php artisan migrate
+* docker-compose exec app php artisan passport:install
 
 ## Documentation
 There are 9 endppoints for the API
