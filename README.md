@@ -16,6 +16,9 @@ There are 8 endppoints for the API
 
 * **Create Article :** post request to ; /articles . Authetication is required.  **uploaded_by,title and body** are required for the input post
 
+* *Get Article :** get  request to ; /articles/{id} . 
+
+* **List Articles :** get request to ; /articles . 
 
 
 **Note ,** Any route that requires authentication, token generated from login is copied to the route header such as the key:Authoriztion and value:token copied
