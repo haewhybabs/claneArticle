@@ -1,4 +1,4 @@
-# claneArticle
+# ClaneArticle
     
     
 ## Installation
@@ -20,17 +20,17 @@ There are 9 endppoints for the API
 
 * **List Articles :** get request to ; /articles
 
-* **Update Articles : ** put request to ; /articles/{id}. Authentication is required . **title,body** are required for the request. Raw data is used for the request such as
+* **Update Articles :** put request to ; /articles/{id}. Authentication is required . **title,body** are required for the request. Raw data is used for the request such as
 {
 	"title": "THis is the title",
 	"body": "THis is the body"
 }
 
-* **Delete Articles : ** delelete request to ; /articles/{id}. Authentication is required. 
+* **Delete Articles :** delelete request to ; /articles/{id}. Authentication is required. 
 
-* **Rate Article : ** post request to ; /articles/{id}/rating. **article_id, rating** are required for the input post. Such that,rating input post is between (1-10)
+* **Rate Article :** post request to ; /articles/{id}/rating. **article_id, rating** are required for the input post. Such that,rating input post is between (1-10)
 
-* **Search Article: ** get request to ; /search/articles. ** search** is required for the input post.
+* **Search Article:** get request to ; /search/articles. ** search** is required for the input post.
 
 
 **Note ,** Any route that requires authentication, token generated from login is copied to the route header such as the key:Authoriztion and value:token copied
