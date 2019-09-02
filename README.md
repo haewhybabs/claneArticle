@@ -14,7 +14,7 @@ There are 9 endppoints for the API
 
 *  **Login :** post request to ; "/login , with **email** and **password** are required for the input post
 
-* **Create Article :** post request to ; /articles . Authetication is required.  **uploaded_by,title and body** are required for the input post
+* **Create Article :** post request to ; /articles . Authetication is required.  **title and body** are required for the input post
 
 * **Get Article :** get  request to ; /articles/{id}  
 
@@ -33,12 +33,12 @@ There are 9 endppoints for the API
 * **Search Article:** get request to ; /search/articles. ** search** is required for the input post.
 
 
-**Note ,** Any route that requires authentication, token generated from login is copied to the route header such as the key:Authoriztion and value:token copied
+**Note ,** Any route that requires authentication, token generated from login is copied to the route header such as the key:Authoriztion and value: Bearer token copied
 
 
 
 #### PostMan Collection link
-https://www.getpostman.com/collections/7971a847efddd96251e6
+https://www.getpostman.com/collections/0aff73fe3cbcabb7b2ab
 
 ## Author
 **Ayobami Babalola**

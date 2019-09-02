@@ -19,6 +19,7 @@ class CreateArticleTable extends Migration
             $table->foreign('uploaded_by')->references('id')->on('users');
             $table->string('title');
             $table->string('body');
+            $table->decimal('cummulative_rating',10,2);
             $table->timestamps();
         });
     }
