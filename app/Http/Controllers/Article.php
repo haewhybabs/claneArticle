@@ -21,7 +21,7 @@ class Article extends Controller
         $validator = Validator::make($request->all(),[
             'title'=>'required',
             'body'=>'required',
-            'uploaded_by'=>'required'
+
         ]);
 
         if($validator->fails()){
@@ -32,7 +32,7 @@ class Article extends Controller
         $article=array(
             'title'=>$request->input('title'),
             'body' =>$request->input('body'),
-            'uploaded_by'=>$request->input('uploaded_by')
+            'uploaded_by'=>auth()->user()->id
         );
 
         ArticleModel::insert($article);
@@ -133,4 +133,6 @@ class Article extends Controller
 
 
     }
+
+
 }
